@@ -45,10 +45,13 @@ def sec(request):
         a=0
         
     if (removepunc != "on" and capitalform != "on" and char_counter != "on" and space_det != "on"):
+        
         return HttpResponse("<h1>Error</h1>")
-    
 
+    elif (removepunc != "on" and capitalform != "on" and char_counter == "on" and space_det != "on"):
+        analyzed = "nothin"
+          
 
-    param={"one":analyzed, "two": a}
+    param={"one":analyzed, "two" : a }
 
     return render(request,'analyz.html',param)
