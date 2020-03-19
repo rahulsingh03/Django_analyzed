@@ -46,10 +46,11 @@ def sec(request):
         
     if (removepunc != "on" and capitalform != "on" and char_counter != "on" and space_det != "on"):
         
-        return HttpResponse("<h1>Error</h1>")
+        return render(request,'Error.html')
 
     elif (removepunc != "on" and capitalform != "on" and char_counter == "on" and space_det != "on"):
-        analyzed = "nothin"
+        analyzed = djtext
+        print(analyzed)
           
 
     param={"one":analyzed, "two" : a }
